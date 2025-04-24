@@ -1,14 +1,14 @@
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
-
+from curl import main_site
 from helper import generate_registration_data
 from locators import Locators
 
 
 class TestRegistrationWithNewData:
 
-    def test_sucsess_registration(self, driver):
+    def test_succsess_registration(self, driver):
 
         name, email, password = generate_registration_data()
         driver.find_element(*Locators.LOGIN_BUTTON).click()
@@ -29,3 +29,15 @@ class TestRegistrationWithNewData:
                                               (Locators.ORDER_BUTTON)).text
         assert text == 'Оформить заказ'
 
+    def test_cannot_register_with_empty_name(self,driver):
+
+        name, email, password = generate_registration_data()
+        driver.find_element(*Locators.LOGIN_BUTTON).click()
+        driver.find_element(*Locators.REGISTER_LINK).click()
+        driver.find_element(*Locators.EMAIL_INPUT).send_keys(email)
+        driver.find_element(*Locators.PASSWORD_INPUT).send_keys(password)
+
+        driver.find_element(*Locators.REGISTER_BUTTON).click()
+
+
+        assert driver.current_url == 'https: // stellarburgers.nomoreparties.site / register'

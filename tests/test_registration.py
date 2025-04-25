@@ -40,4 +40,4 @@ class TestRegistrationWithNewData:
         driver.find_element(*Locators.REGISTER_BUTTON).click()
 
 
-        assert driver.current_url == 'https: // stellarburgers.nomoreparties.site / register'
+        assert driver.current_url == 'https://stellarburgers.nomoreparties.site/register'

@@ -1,5 +1,4 @@
 from faker import Faker
-from random import random
 faker = Faker()
 
 

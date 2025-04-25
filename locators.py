@@ -10,3 +10,5 @@ class Locators:
     REGISTER_LINK = (By.XPATH,"//a[text()='Зарегистрироваться']") # Ссылка 'Зарегистрироваться'
     REGISTER_BUTTON = (By.XPATH, "//button[contains(text(), 'Зарегистрироваться')]")# Кнопка 'Зарегистрироваться'
     ERROR_INPUT = (By.XPATH,"//p[text()='Некорректный пароль']") # Ошибка 'Некорректный пароль'
+    ACCOUNT_BUTTON = ((By.XPATH,"//p[text()='Личный Кабинет']")) # Кнопка 'Личный кабинет'
+    LOGIN_LINK = (By.XPATH,"//a[text()='Войти']") # Ссылка 'Войти'

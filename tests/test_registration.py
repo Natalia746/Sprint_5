@@ -82,3 +82,13 @@ class TestRegistrationWithNewData:
 
         actual_text = driver.find_element(*Locators.ERROR_INPUT).text
         assert actual_text == "Некорректный пароль"
+
+    def test_cannot_register_with_empty_password(self, driver):
+
+        name, email, password = generate_registration_data()
+        driver.find_element(*Locators.LOGIN_BUTTON).click()
+        driver.find_element(*Locators.REGISTER_LINK).click()
+        driver.find_element(*Locators.NAME_INPUT).send_keys(name)
+        driver.find_element(*Locators.EMAIL_INPUT).send_keys(email)
+        driver.find_element(*Locators.REGISTER_BUTTON).click()
+        assert driver.current_url == 'https://stellarburgers.nomoreparties.site/register'

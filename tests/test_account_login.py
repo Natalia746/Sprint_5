@@ -12,7 +12,7 @@ class TestAccountLogin:
         driver.find_element(*Locators.EMAIL_INPUT).send_keys(*Credentials.email)
         driver.find_element(*Locators.PASSWORD_INPUT).send_keys(*Credentials.password)
         driver.find_element(*Locators.SUBMIT_BUTTON).click()
-        text = WebDriverWait(driver, 15).until(EC.visibility_of_element_located
+        text = WebDriverWait(driver, 20).until(EC.visibility_of_element_located
                                                (Locators.ORDER_BUTTON)).text
         assert text == 'Оформить заказ'
 

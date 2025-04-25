@@ -13,3 +13,4 @@ class Locators:
     ACCOUNT_BUTTON = ((By.XPATH,"//p[text()='Личный Кабинет']")) # Кнопка 'Личный кабинет'
     LOGIN_LINK = (By.XPATH,"//a[text()='Войти']") # Ссылка 'Войти'
     RESTORE_LINK = (By.XPATH,"//a[text()='Восстановить пароль']") # Ссылка 'Восстановить пароль'
+    LOGIN_INPUT = (By.XPATH, "//input[@value='nata']") # Поле с заполненым именем

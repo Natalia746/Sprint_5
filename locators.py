@@ -1,7 +1,7 @@
 from selenium.webdriver.common.by import By
 
 class Locators:
-    LOGIN_BUTTON= (By.XPATH, "//button[contains(text(), 'Войти в аккаунт')]") # Кнопка 'Войти в аккаунт'
+    LOGIN_BUTTON = (By.XPATH, "//button[contains(text(), 'Войти в аккаунт')]") # Кнопка 'Войти в аккаунт'
     NAME_INPUT = (By.XPATH, "//div[label[contains(text(),'Имя')]]//input") # Поле ввода Имя
     EMAIL_INPUT = (By.XPATH, "//div[label[contains(text(),'Email')]]//input") # Поле ввода Email
     PASSWORD_INPUT = (By.XPATH, "//div[label[contains(text(),'Пароль')]]//input") # Поле ввода пароля
@@ -16,3 +16,5 @@ class Locators:
     LOGIN_INPUT = (By.XPATH, "//input[@value='nata']") # Поле с заполненным именем
     CONSTRUCTOR_BUTTON = (By.XPATH, "//p[text()='Конструктор']") # Кнопка 'Конструктор'
     HEADING = (By.XPATH, "//h1[text()='Соберите бургер']") # Заголовок 'Соберите бургер'
+    STELLAR_BURGERS = (By.XPATH, "//div[@class='AppHeader_header__logo__2D0X2']") # Логотип STELLAR_BURGERS
+    EXIT_BUTTON = (By.XPATH, "//button[text()='Выход']")

@@ -10,7 +10,7 @@ from locators import Locators
 
 class TestRegistrationWithNewData:
 
-    def test_succsess_registration(self, driver):
+    def test_success_registration(self, driver):
 
         name, email, password = generate_registration_data()
         driver.find_element(*Locators.LOGIN_BUTTON).click()

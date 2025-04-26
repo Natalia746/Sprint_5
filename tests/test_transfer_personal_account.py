@@ -21,7 +21,7 @@ class TestPersonalCabinetNavigation:
             EC.presence_of_element_located((Locators. LOGIN_INPUT))
         )
 
-        input_value = element.get_attribute("value")
+        input_value = element.get_attribute('value')
 
         assert input_value == 'nata'
 

@@ -14,3 +14,5 @@ class Locators:
     LOGIN_LINK = (By.XPATH,"//a[text()='Войти']") # Ссылка 'Войти'
     RESTORE_LINK = (By.XPATH,"//a[text()='Восстановить пароль']") # Ссылка 'Восстановить пароль'
     LOGIN_INPUT = (By.XPATH, "//input[@value='nata']") # Поле с заполненным именем
+    CONSTRUCTOR_BUTTON = (By.XPATH, "//p[text()='Конструктор']") # Кнопка 'Конструктор'
+    HEADING = (By.XPATH, "//h1[text()='Соберите бургер']") # Заголовок 'Соберите бургер'

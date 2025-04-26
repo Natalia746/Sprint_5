@@ -80,7 +80,7 @@ class TestRegistrationWithNewData:
         driver.find_element(*Locators.REGISTER_BUTTON).click()
 
         actual_text = driver.find_element(*Locators.ERROR_INPUT).text
-        assert actual_text == "Некорректный пароль"
+        assert actual_text == 'Некорректный пароль'
 
     def test_cannot_register_with_empty_password(self, driver):
 

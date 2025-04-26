@@ -3,7 +3,7 @@ faker = Faker()
 
 
 def generate_registration_data():
-    # Генерация имени: ровно 8 латинских букв
+    # Генерация имени
     name = faker.lexify(text='????????', letters='abcdefghijklmnopqrstuvwxyz').capitalize()
 
     # Генерация email с гарантированным наличием точки в домене
@@ -24,7 +24,7 @@ def generate_registration_data():
 
 
 def generate_registration_data_without_a_dot_in_an_email():
-    # Генерация имени: ровно 8 латинских букв
+    # Генерация имени:
     name = faker.lexify(text='????????', letters='abcdefghijklmnopqrstuvwxyz').capitalize()
 
     # Генерация email с гарантированным отсутствием точек в домене
@@ -73,7 +73,7 @@ def generate_registration_data_with_invalid_email_missing_at():
     return name, invalid_email, password
 
 def generate_registration_data_with_an_invalid_password():
-    # Генерация имени: ровно 8 латинских букв
+    # Генерация имени
     name = faker.lexify(text='????????', letters='abcdefghijklmnopqrstuvwxyz').capitalize()
 
     # Генерация email с гарантированным наличием точки в домене
